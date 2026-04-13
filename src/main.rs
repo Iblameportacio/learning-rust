@@ -1,15 +1,9 @@
-//Como te gusta el negocio de las laptops y Temu, vamos a automatizar el cálculo de ganancias.
-//Tarea: Crea tres variables: costo (f32), precio_venta (f32) y nombre_articulo.
-//Lógica: Calcula la ganancia (venta - costo) y el porcentaje de margen.
-//Output esperado: "Articulo: ThinkPad | nancia: $350.000 | Margen: 77%"
+//Ya sabemos que tu primo mide 2.16m. Vamos a hacer una lista de alturas y filtrar quiénes son "Gigantes".
+//Tarea: Crea un vec![1.70, 1.90, 2.16, 1.65, 2.05].
+//Lógica: Usa .iter() y .filter() para obtener solo las alturas mayores a 2.00m.
+//Output esperado: "Los gigantes son: [2.16, 2.05]"
 fn main() {
-    let costo: f32 = 1000000.0;
-    let precio_venta: f32 = 1350000.0;
-    let _nombre_articulo: &str = "ThinkPad";
-    let ganancia = precio_venta - costo;
-    let _margen = (ganancia / precio_venta) * 100.0;
-    println!(
-        "Articulo: {} | Ganancia: {} | Margen: {}%",
-        _nombre_articulo, ganancia, _margen
-    )
+    let alturas: Vec<f32> = vec![1.70, 1.90, 2.16, 1.65, 2.05];
+    let gigantes = alturas.iter().filter(|&h| h > &2.00).collect::<Vec<_>>();
+    println!("Los gigantes son: {:?}", gigantes);
 }
