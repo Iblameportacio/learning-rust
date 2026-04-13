@@ -1,15 +1,22 @@
-//Vamos a convertir notas numéricas a conceptos usando el match que tanto nos sirve.
-//Tarea: Crea una variable nota (f32).
-//Lógica: Usa un match (puedes convertir la nota a entero con as i32 si quieres usar rangos como 0..=2).
-//3.0 a 3.9 -> "Pasaste raspando"
-//4.0 a 5.0 -> "bien ahi bro"
-//Menos de 3.0 -> "F por ti, broski"
-//Output: El mensaje correspondiente.
+//En lugar de variables sueltas, vamos a agrupar datos.
+//Tarea: Crea una struct llamada Laptop con los campos: modelo (String), ram (u32) y precio (f32).
+//Lógica: Instancia una laptop (ej. una T470), cámbiale el precio (necesitarás let mut) e imprímela usando {:?}.
+//Tip: Recuerda añadir #[derive(Debug)] arriba de la struct para poder imprimirla.
+#[derive(Debug)]
+struct Laptop {
+    modelo: String,
+    ram: u32,
+    precio: f32,
+}
+
 fn main() {
-    let nota: f32 = 4.5;
-    match nota {
-        3.0..=3.9 => println!("Pasaste raspando"),
-        4.0..=5.0 => println!("bien ahi bro"),
-        _ => println!("F por ti, broski"),
-    }
+    let mut t470 = Laptop {
+        modelo: String::from("T470"),
+        ram: 16,
+        precio: 600.0_f32,
+    };
+    t470.precio = 550.0;
+    println!("{}", t470.modelo);
+    println!("{}", t470.ram);
+    println!("{}", t470.precio);
 }
