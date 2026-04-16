@@ -1,9 +1,9 @@
-//verificar si un numero es par o impar
+//crear un programa que verifique si eres mayor de edad
 fn main() {
-    let numero: i8 = 57;
-    if numero % 2 == 0 {
-        println!("El numero es par");
+    let edad: i8 = 18;
+    if edad >= 18 {
+        println!("eres mayorde edad broski")
     } else {
-        println!("El numero es impar");
+        println!("no eres mayor de edad")
     }
 }
