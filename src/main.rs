@@ -1,8 +1,9 @@
-///Tarea: Crea un vec!["ls", "cd", "sudo", "pacman"].
-//Lógica: Usa .iter(), .map() y el método .to_uppercase() para convertir todos los comandos a mayúsculas.
-//Output esperado: ["LS", "CD", "SUDO", "PACMAN"] guardado en un nuevo Vec<String>.
+//verificar si un numero es par o impar
 fn main() {
-    let comandos = vec!["ls", "cd", "sudo", "pacman"];
-    let comandos_mayusculas: Vec<String> = comandos.iter().map(|c| c.to_uppercase()).collect();
-    println!("{:?}", comandos_mayusculas);
+    let numero: i8 = 57;
+    if numero % 2 == 0 {
+        println!("El numero es par");
+    } else {
+        println!("El numero es impar");
+    }
 }
