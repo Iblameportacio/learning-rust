@@ -1,9 +1,6 @@
-//crear un programa que verifique si eres mayor de edad
+//hacer un bucle for del 1 al 10
 fn main() {
-    let edad: i8 = 18;
-    if edad >= 18 {
-        println!("eres mayorde edad broski")
-    } else {
-        println!("no eres mayor de edad")
+    for i in 1..=10 {
+        print!("{:?}", i)
     }
 }
