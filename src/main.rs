@@ -1,10 +1,8 @@
-//crea un bucl con numeros del 1 al 10, si es mayor a 10 es grande sino es pequeño
+//Objetivo: Imprime los números del 10 al 1 (en orden descendente) y al final imprime "¡IGNICIÓN!".
 fn main() {
-    for i in 1..=15 {
-        if i > 10 {
-            println!("el numero {} es grande", i)
-        } else {
-            println!("el numero {} es pequeño", i)
-        }
+    for i in (1..=10).rev() {
+        println!("explosion en {}", i);
     }
+
+    println!("¡IGNICIÓN!");
 }
