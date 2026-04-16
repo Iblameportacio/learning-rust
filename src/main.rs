@@ -1,6 +1,14 @@
-//hacer un bucle for del 1 al 10
+//fizzbuzz del 1 al 50 broski
 fn main() {
-    for i in 1..=10 {
-        print!("{:?}", i)
+    for i in 1..=50 {
+        if i % 3 == 0 && i % 5 == 0 {
+            println!("FizzBuzz");
+        } else if i % 3 == 0 {
+            println!("Fizz");
+        } else if i % 5 == 0 {
+            println!("Buzz");
+        } else {
+            println!("{}", i);
+        }
     }
 }
