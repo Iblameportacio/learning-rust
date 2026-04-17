@@ -1,8 +1,15 @@
-//Objetivo: Imprime los números del 10 al 1 (en orden descendente) y al final imprime "¡IGNICIÓN!".
+//Afuera del bucle: Una variable mut total = 0;.
+//Dentro del bucle:
+//Un rango del 1 al 5.
+//Calculas el cuadrado (i * i).
+//Se lo sumas al total.
+//Afuera del bucle: Imprimes el total final.
 fn main() {
-    for i in (1..=10).rev() {
-        println!("explosion en {}", i);
+    let mut total: i32 = 0;
+    for i in 1..=5 {
+        let cuadrado: i32 = i * i;
+        total = total + cuadrado;
     }
 
-    println!("¡IGNICIÓN!");
+    println!("el total es {:?}", total)
 }
