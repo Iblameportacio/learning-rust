@@ -1,17 +1,17 @@
-//Objetivo: Dado el número 24, cuenta cuántos divisores exactos tiene
-// (números que lo dividen y dejan residuo 0).
-//Instrucción: 1.  Crea una variable fija let numero = 24;.
-//2.  Crea un acumulador mut contador = 0;.
-//3.  Haz un bucle del 1 al 24.
-//4.  Si numero % i == 0, súmale 1 al contador.
-//Resultado esperado: "El número 24 tiene [X] divisores"
+//Objetivo: Encontrar el número más grande dentro de una secuencia (aunque la hagamos manual).
+//Instrucción:
+//Imagina que tienes estos números: [10, 55, 32, 5, 90, 12].
+//Crea una variable mut mayor = 0;.
+//Haz un bucle que recorra esos números (puedes usar un array si te atreves: for n in [10, 55, 32, 5, 90, 12]).
+//Si el número actual n es mayor que mayor, entonces mayor ahora vale n.
+//Resultado esperado: "El número más grande es 90".
 fn main() {
-    let numero: u8 = 24;
-    let mut contador = 0;
-    for i in 1..=24 {
-        if numero % i == 0 {
-            contador = contador + 1
+    let numeros: [i32; 6] = [10, 55, 32, 5, 90, 12];
+    let mut mayor: i32 = 0;
+    for n in numeros.iter().map(|&n| n) {
+        if n > mayor {
+            mayor = n
         }
     }
-    println!("el numero 24 tiene {} divisores", contador)
+    println!("el numero mas grande es {}", mayor)
 }
