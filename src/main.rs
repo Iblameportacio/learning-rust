@@ -1,20 +1,10 @@
-//Objetivo: Crear una función que reciba un número y diga si es primo o no.
-//Instrucción: Crea fn es_primo(n: u32) -> bool. Dentro, usa un bucle que vaya de 2 hasta la mitad del número.
-//Si algún número lo divide exactamente, devuelve false. Si termina el bucle sin encontrar divisores, devuelve true.
-//En el main: Llama a la función con un número y usa un if para imprimir "Es primo" o "No es primo".
+//Objetivo: En el kernel se mueven muchos datos. Vamos a intentar invertir una secuencia.
+//Instrucción: Dado un array let datos = [1, 2, 3, 4, 5];,
+//  usa un bucle for y el método .rev() para imprimir los números al revés, pero todos en la misma línea.
+//Pista: Usa print! (sin el ln) para que no salte de línea, y un println!("") al final del bucle.
 fn main() {
-    let mi_numero = 13;
-    let es_o_no: bool = es_primo(mi_numero);
-    println!("el numero {} es primo {}", mi_numero, es_o_no)
-}
-
-fn es_primo(n: u32) -> bool {
-    for i in 2..=n {
-        if n % i == 0 {
-            return false;
-        } else if n % i != 0 {
-            return true;
-        }
+    let datos = [1, 2, 3, 4, 5];
+    for d in datos.iter().rev() {
+        print!("{:?}", d);
     }
-    true
 }
