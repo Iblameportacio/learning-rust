@@ -1,17 +1,20 @@
-//Objetivo: Encontrar el número más grande dentro de una secuencia (aunque la hagamos manual).
-//Instrucción:
-//Imagina que tienes estos números: [10, 55, 32, 5, 90, 12].
-//Crea una variable mut mayor = 0;.
-//Haz un bucle que recorra esos números (puedes usar un array si te atreves: for n in [10, 55, 32, 5, 90, 12]).
-//Si el número actual n es mayor que mayor, entonces mayor ahora vale n.
-//Resultado esperado: "El número más grande es 90".
+//Objetivo: Crear una función que reciba un número y diga si es primo o no.
+//Instrucción: Crea fn es_primo(n: u32) -> bool. Dentro, usa un bucle que vaya de 2 hasta la mitad del número.
+//Si algún número lo divide exactamente, devuelve false. Si termina el bucle sin encontrar divisores, devuelve true.
+//En el main: Llama a la función con un número y usa un if para imprimir "Es primo" o "No es primo".
 fn main() {
-    let numeros: [i32; 6] = [10, 55, 32, 5, 90, 12];
-    let mut mayor: i32 = 0;
-    for n in numeros.iter().map(|&n| n) {
-        if n > mayor {
-            mayor = n
+    let mi_numero = 13;
+    let es_o_no: bool = es_primo(mi_numero);
+    println!("el numero {} es primo {}", mi_numero, es_o_no)
+}
+
+fn es_primo(n: u32) -> bool {
+    for i in 2..=n {
+        if n % i == 0 {
+            return false;
+        } else if n % i != 0 {
+            return true;
         }
     }
-    println!("el numero mas grande es {}", mayor)
+    true
 }
