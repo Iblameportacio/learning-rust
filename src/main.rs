@@ -1,8 +1,7 @@
-//calula el prdocuto de 6!
+//hacer una escalera de asteriscos
 fn main() {
-    let mut producto: i16 = 1;
-    for i in (1..=6).rev() {
-        producto *= i;
+    for i in 1..=5 {
+        let resultado: String = "*".repeat(i);
+        println!("{}", resultado)
     }
-    println!("el resultado es {}", producto)
 }
