@@ -1,10 +1,13 @@
-//Objetivo: En el kernel se mueven muchos datos. Vamos a intentar invertir una secuencia.
-//Instrucción: Dado un array let datos = [1, 2, 3, 4, 5];,
-//  usa un bucle for y el método .rev() para imprimir los números al revés, pero todos en la misma línea.
-//Pista: Usa print! (sin el ln) para que no salte de línea, y un println!("") al final del bucle.
+//El Buscador de Promedios (Tipos de datos):
+//Objetivo: En el kernel, los decimales son peligrosos. Vamos a practicar con f32.
+//Instrucción: Suma los números del 1 al 10 y calcula el promedio.
+//Pista: Para que el promedio sea exacto, tendrás que convertir la suma a decimal:
+// let promedio = suma as f32 / 10.0;.
 fn main() {
-    let datos = [1, 2, 3, 4, 5];
-    for d in datos.iter().rev() {
-        print!("{:?}", d);
+    let mut suma = 0;
+    for i in 1..=10 {
+        suma += i;
     }
+    let promedio = suma as f32 / 10.0;
+    println!("el promedio es {}", promedio)
 }
