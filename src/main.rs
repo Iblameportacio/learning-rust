@@ -1,8 +1,18 @@
-//Potencias de 2: Imprime las potencias de 2 ($2^1, 2^2, ...$) hasta llegar a $2^{10}$.
+//Suma de Rango: Crea una función que reciba dos números y sume todo lo que hay entre ellos.
 fn main() {
-    let dos: i32 = 2;
-    for i in 1..=10 {
-        println!("{} ^ {} = {}", dos, i, 2_i32.pow(i));
-    }
+    let resultado = suma_rango(1, 10); // Aquí eliges tú los números
+    println!("La suma del rango es: {}", resultado);
 }
-//no bro me siento como si hubiera tomado nzt lmaoo
+
+fn suma_rango(inicio: i32, fin: i32) -> i32 {
+    let mut acumulador = 0;
+    for i in inicio..=fin {
+        if i >= 1 {
+            acumulador = acumulador + i
+        }
+    }
+    // y ve sumando cada número al acumulador.
+
+    acumulador // Al final devuelves el total
+}
+//niceee
