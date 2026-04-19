@@ -1,18 +1,13 @@
-//Suma de Rango: Crea una función que reciba dos números y sume todo lo que hay entre ellos.
+use std::f64::consts::PI;
+
+//Área de Círculo: Función que recibe el radio ($f32$) y devuelve el área.
 fn main() {
-    let resultado = suma_rango(1, 10); // Aquí eliges tú los números
-    println!("La suma del rango es: {}", resultado);
-}
+    let radio: f32 = 32.0;
 
-fn suma_rango(inicio: i32, fin: i32) -> i32 {
-    let mut acumulador = 0;
-    for i in inicio..=fin {
-        if i >= 1 {
-            acumulador = acumulador + i
-        }
-    }
-    // y ve sumando cada número al acumulador.
-
-    acumulador // Al final devuelves el total
+    let resultado = area(radio);
+    println!("el ares es {} cm²", resultado);
 }
-//niceee
+fn area(n: f32) -> f64 {
+    let n = n as f64;
+    PI * n * n
+}
