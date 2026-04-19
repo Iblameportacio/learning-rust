@@ -2,7 +2,7 @@
 fn main() {
     let cinco: f32 = 5.0;
     let resultado = espar(cinco);
-    println!("este numero {} es par?{}", cinco, resultado);
+    println!("este numero {} es par?\n{}", cinco, resultado);
 }
 fn espar(n: f32) -> bool {
     if n % 2.0 == 0.0 {
