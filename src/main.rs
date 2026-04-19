@@ -1,14 +1,9 @@
-//Contador de Impares: Cuenta cuántos números impares hay entre 1 y 100.
+//El 7 de la suerte: Imprime los números del 1 al 50, pero si es múltiplo de 7, imprime "¡SUERTE!".
 fn main() {
-    let mut inicio = 0;
-    for i in 1..=100 {
-        if i % 2 != 0 {
-            inicio = inicio + 1;
+    for i in 1..=50 {
+        println!("{}", i);
+        if i % 7 == 0 {
+            println!("¡SUERTE!");
         }
     }
-    println!(
-        "el numero de pares de los numeros del 1 al 100 son\n {}",
-        inicio
-    )
 }
-//ya empiezo a notar que mi logica de prograacion ha mejorado mucho
