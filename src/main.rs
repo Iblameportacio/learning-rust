@@ -1,15 +1,13 @@
-//Máximo de Tres: Función que reciba 3 números y devuelva el mayor de ellos.
+//Calculadora de IVA: Función que reciba un precio y le sume el 19% (IVA de Colombia).
 fn main() {
-    let numeros: (i32, i32, i32) = (1, 432, 873);
-    let resultado = elmayor(numeros);
-    println!("en {:?} el mayor es {:?}", numeros, resultado);
+    let compra: f64 = 40.000;
+    let total = iva(compra);
+    println!(
+        "la compra de {:?} termina siendo {:?} con un 19% de iva",
+        compra, total
+    );
 }
-fn elmayor(nums: (i32, i32, i32)) -> i32 {
-    if nums.0 > nums.1 && nums.0 > nums.2 {
-        return nums.0;
-    } else if nums.1 > nums.0 && nums.1 > nums.2 {
-        return nums.1;
-    } else {
-        return nums.2;
-    }
+fn iva(n: f64) -> f64 {
+    let n: f64 = (n * 0.19) + n;
+    n
 }
