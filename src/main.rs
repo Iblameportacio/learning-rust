@@ -1,13 +1,9 @@
-//Promedio de Notas: Función que reciba 3 notas ($f32$) y diga si aprueba (mayor a 3.0).
+//Suma de Vector: Crea un vector con 5 números y suma todos sus elementos.
 fn main() {
-    let nota1: f64 = 4.0;
-    let nota2: f64 = 1.0;
-    let nota3: f64 = 3.0;
-    let notas: (f64, f64, f64) = (nota1, nota2, nota3);
-    let solucion: f64 = promedio(notas);
-    println!(" el promedio de las notas {:?} es {:?}", notas, solucion);
-}
-fn promedio(nums: (f64, f64, f64)) -> f64 {
-    let nums = (nums.0 + nums.1 + nums.2) / 3.0;
-    nums
+    let v = vec![1, 2, 3, 4, 5];
+    let suma = v[0] + v[1] + v[2] + v[3] + v[4];
+    println!(
+        "{:?} + {:?} + {:?} + {:?} + {:?} = {:?}",
+        v[0], v[1], v[2], v[3], v[4], suma
+    )
 }
