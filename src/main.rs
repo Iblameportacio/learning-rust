@@ -1,8 +1,7 @@
 use std::vec;
-//Filtro de Positivos: Dado un vector con números negativos y positivos,
-// crea uno nuevo solo con los positivos.
+//Duplicador: Multiplica por 2 cada elemento de un vector.
 fn main() {
-    let v: Vec<i32> = vec![1, 2, 3, 4, -5, 6, 8, -9];
-    let ve: Vec<i32> = vec![1, 2, 3, 4, 5, 6, 8, 9];
-    println!("el vector v es {:?} y el vector ve es {:?}", v, ve);
+    let v: Vec<i32> = vec![1, 2, 3, 4, 5, 6, 8, 9, 10, 11];
+    let resultado: Vec<i32> = v.iter().map(|x| x * 2).collect();
+    println!("el vector {:?} multiplicado por dos es {:?}", v, resultado);
 }
