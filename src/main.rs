@@ -1,7 +1,11 @@
-use std::vec;
-//Duplicador: Multiplica por 2 cada elemento de un vector.
+//Contador de Ceros: Cuenta cuántas veces aparece el número 0 en un array.
 fn main() {
-    let v: Vec<i32> = vec![1, 2, 3, 4, 5, 6, 8, 9, 10, 11];
-    let resultado: Vec<i32> = v.iter().map(|x| x * 2).collect();
-    println!("el vector {:?} multiplicado por dos es {:?}", v, resultado);
+    let mut contador = 0;
+    let v: Vec<i32> = vec![1, 0, 2, 3, 4, 5, 6, 0, 8, 9, 10, 0, 11];
+    for x in &v {
+        if *x == 0 {
+            contador = contador + 1;
+        }
+    }
+    println!(" hay {:?} ceros en el vector", contador)
 }
