@@ -1,11 +1,13 @@
-//Contador de Ceros: Cuenta cuántas veces aparece el número 0 en un array.
+//Fibonacci Simple: Imprime los primeros 10 números de la secuencia de Fibonacci.
+// es igual a 0+1+1+2+3+4+5+6+7+8+9+10= 1,2,3,5,8,13,21...
 fn main() {
-    let mut contador = 0;
-    let v: Vec<i32> = vec![1, 0, 2, 3, 4, 5, 6, 0, 8, 9, 10, 0, 11];
-    for x in &v {
-        if *x == 0 {
-            contador = contador + 1;
-        }
+    let mut a = 0;
+    let mut b = 1;
+    for _i in 0..10 {
+        let i = a + b;
+        let solucion = a;
+        println!("{:?}", solucion);
+        a = b;
+        b = i;
     }
-    println!(" hay {:?} ceros en el vector", contador)
 }
