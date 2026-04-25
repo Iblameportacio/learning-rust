@@ -1,11 +1,9 @@
-//Contador de Letras: Usa un string y cuenta cuántas veces aparece la letra 'a'.
+//Password Checker: Función que reciba un string y diga si tiene más de 8 caracteres.
 fn main() {
     let mut contador = 0;
-    let oracion = String::from("aredqaerqdveadqaaaaaaaareadqadsyteqhudcbjhwqvdqiaaa");
-    for letra in oracion.chars() {
-        if letra == 'a' {
-            contador += 1;
-        }
+    let password = String::from("aredqaerqd2819ywqyg73");
+    for _i in password.chars() {
+        contador += 1;
     }
-    println!("hay {:?} a's en la oracion {:?}", contador, oracion);
+    println!("hay {:?} caracteres en la oracion {:?}", contador, password);
 }
