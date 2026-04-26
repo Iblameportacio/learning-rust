@@ -1,11 +1,14 @@
-//Suma de Dígitos: (Difícil) Toma el número 123 y suma $1 + 2 + 3 = 6$.
+//FizzBuzz Extreme: Del 1 al 100, múltiplos de 3 (Fizz), de 5 (Buzz), de ambos (FizzBuzz) y de 7 (Bazz).
 fn main() {
-    let mut n = 123;
-    println!("la suma de los numeros {:?} es igual a ", n);
-    let mut suma = 0;
-    while n > 0 {
-        suma += n % 10;
-        n /= 10;
+    for i in 1..=100 {
+        if i % 7 == 0 && i % 5 == 0 && i % 3 == 0 {
+            println!("{} Bazz", i)
+        } else if i % 3 == 0 && i % 5 == 0 {
+            println!("{} FizzBuzz", i)
+        } else if i % 3 == 0 {
+            println!("{} Fizz", i)
+        } else if i % 5 == 0 {
+            println!("{} Buzz", i)
+        }
     }
-    println!("{}", suma)
 }
