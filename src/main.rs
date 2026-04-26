@@ -1,10 +1,6 @@
-//Palíndromo: Función que diga si una palabra se lee igual al revés (ej: "ana").
+//Ordenamiento Simple: Dado un vector [3, 1, 4, 2], ordénalo de menor a mayor (puedes usar .sort()).
 fn main() {
-    let sentence = String::from("oso"); //we already know this is a palindrome
-    let solved: bool = palindrome(sentence.clone());
-    println!("the sentence {:?} is a palindrome? {:?}", sentence, solved);
-}
-fn palindrome(s: String) -> bool {
-    let z = s.chars().rev().collect::<String>();
-    z == s
+    let mut numbers = vec![3, 1, 4, 2];
+    numbers.sort();
+    println!("the vector {:?} has been solved", numbers);
 }
