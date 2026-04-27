@@ -1,23 +1,10 @@
-//Simulador de Cajero: Tienes un saldo inicial, crea funciones para retirar y depositar.
+//El Reloj: Un bucle que imprima "Minuto X, Segundo Y" hasta llegar a 5 minutos.
 fn main() {
-    let saldo: f32 = 0.0;
-    let deposito: f32 = 40.0;
-    let retiro: f32 = 32.4;
-
-    println!("tu saldo actual es {:?}", saldo);
-
-    let saldo_despues_deposito = depositar(saldo, deposito);
-    let saldo_total = retirar(saldo_despues_deposito, retiro);
-
-    println!("depositaste {:?}", deposito);
-    println!("retiraste {:?}", retiro);
-    println!("tu saldo total disponible es {:?}", saldo_total);
-}
-
-fn depositar(n: f32, cantidad: f32) -> f32 {
-    n + cantidad
-}
-
-fn retirar(n: f32, cantidad: f32) -> f32 {
-    n - cantidad
+    let segundos = 0;
+    let minutos = 0;
+    for i in minutos..=5 {
+        for s in segundos..=59 {
+            println!("minuto {} segundo {}", i, s)
+        }
+    }
 }
